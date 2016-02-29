@@ -154,7 +154,7 @@ if test -d $cache_dir/ruby/.gem; then
   status "Restoring ruby gems directory from cache"
   cp -r $cache_dir/ruby/.gem $build_dir
   HOME=$build_dir gem update sass --user-install --no-rdoc --no-ri
-  sass -v
+  $build_dir/.gem/ruby/2.2.0/bin/sass -v
 else
   HOME=$build_dir gem install sass --user-install --no-rdoc --no-ri
 fi
